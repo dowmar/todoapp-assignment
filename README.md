@@ -1,4 +1,11 @@
 # Todo App
+##Preview
+- Home
+![image](https://github.com/user-attachments/assets/22b8657a-11ce-413f-b783-222e20128abe)
+
+- Task
+![image](https://github.com/user-attachments/assets/a659518c-3068-4878-b02f-c33ba58dca23)
+
 
 
 
