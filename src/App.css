@@ -1,0 +1,13 @@
+nav {
+  background-color: #16abf8;
+  height: 105px;
+  display: block;
+}
+
+.header-title {
+  color: #fff;
+  line-height: 36px;
+  margin: auto;
+  padding-bottom: 31px;
+  padding-top: 38px;
+}
