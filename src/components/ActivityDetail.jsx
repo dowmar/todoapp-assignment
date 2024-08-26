@@ -135,7 +135,7 @@ function ActivityDetail() {
         setSortOrder(sortOption);
     };
 
-    const sortedTasks = [...(activity.tasks || [])].sort((a, b) => {
+    const sortedTasks = activity.tasks ? [...Object.values(activity.tasks)].sort((a, b) => {
         switch (sortOrder) {
             case 'Terlama':
                 return new Date(a.createdAt) - new Date(b.createdAt);
@@ -146,12 +146,12 @@ function ActivityDetail() {
             case 'Belum Selesai':
                 if (!a.isActive && b.isActive) return -1;
                 if (a.isActive && !b.isActive) return 1;
-                return new Date(a.createdAt) - new Date(b.createdAt); // Oldest first
+                return new Date(a.createdAt) - new Date(b.createdAt);
             case 'Terbaru':
             default:
                 return new Date(b.createdAt) - new Date(a.createdAt);
         }
-    });
+    }) : [];
 
     if (isLoading) {
         return <Loading />;
